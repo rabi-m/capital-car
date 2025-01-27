@@ -1,1 +1,29 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Capital Car</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        table { margin: auto; border-collapse: collapse; width: 80%; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background-color: #4CAF50; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Capital Car</h1>
+    <table>
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Price</th>
+        </tr>
+        {% for car in cars %}
+        <tr>
+            <td>{{ car.brand }}</td>
+            <td>{{ car.model }}</td>
+            <td>${{ car.price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
